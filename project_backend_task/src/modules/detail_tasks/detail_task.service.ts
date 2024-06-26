@@ -11,6 +11,6 @@ export class DetailTaskService {
   ) {}
 
   async findTaskID(id: string): Promise<DetailTask> {
-    return this.detailTaskResponitory.findOne(id);
+    return this.detailTaskResponitory.findOne({ where: { id } });
   }
 }

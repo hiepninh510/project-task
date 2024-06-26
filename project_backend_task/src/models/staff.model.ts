@@ -27,6 +27,9 @@ export class Staff {
   @Column()
   position: string;
 
+  @Column()
+  image: string;
+
   @ManyToMany(() => Task, (task) => task.staffs)
   @JoinTable()
   tasks: Task[];
